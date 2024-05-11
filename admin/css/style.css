@@ -127,14 +127,14 @@ a:hover {
 .bk-ghost {
   background: transparent;
 }
-.bk-img {
+/* .bk-img {
   position: relative;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../../img/login-bg.jpg);
-}
+} */
 .bk-fixed {
   background-attachment: fixed;
 }

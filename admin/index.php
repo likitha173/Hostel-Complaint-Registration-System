@@ -50,13 +50,16 @@ $stmt=$mysqli->prepare("SELECT username,email,password,id FROM admin WHERE (user
 	<link rel="stylesheet" href="css/style.css">
 </head
 <body>
+<?php include('../includes/header.php');?>
+
+<!-- <?php include('../includes/sidebar.php');?> -->
+<div class="login-page">
 	
-	<div class="login-page bk-img" style="background-image: url(img/login-bg.jpg);">
-		<div class="form-content">
-			<div class="container">
+	<div class="form-content">
+		<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3" style="margin-top:4%">
-						<h1 class="text-center text-bold text-light mt-4x">Hostel Management System</h1>
+						<h1 class="text-center text-bold text-blue mt-4x">VIT Bhopal HGRS</h1>
 						<div class="well row pt-2x pb-3x bk-light">
 							<div class="col-md-8 col-md-offset-2">
 							
@@ -76,6 +79,7 @@ $stmt=$mysqli->prepare("SELECT username,email,password,id FROM admin WHERE (user
 			</div>
 		</div>
 	</div>
+	
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap-select.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -85,5 +89,6 @@ $stmt=$mysqli->prepare("SELECT username,email,password,id FROM admin WHERE (user
 	<script src="js/fileinput.js"></script>
 	<script src="js/chartData.js"></script>
 	<script src="js/main.js"></script>
+	
 </body>
 </html>

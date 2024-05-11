@@ -60,39 +60,49 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 					<div class="col-md-12">
 						<h2 class="page-title" style="margin-top:4%">Student Feedback</h2>
 						<div class="panel panel-default">
-							<div class="panel-heading">All Room Details</div>
-							<div class="panel-body">
-								<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
-									<thead>
-										<tr>
-											<th>Sno.</th>
-											<th>Student Name</th>
-											<th>Reg no</th>
-											<th>room no  </th>
-											<th>Seater </th>
-											<th>Staying From </th>
-											<th>Feedback Date </th>
-											<th>Action</th>
-										</tr>
-									</thead>
-									<tfoot>
-										<tr>
-											<th>Sno.</th>
-											<th>Student Name</th>
-											<th>Reg no</th>
-											<th>Room no  </th>
-											<th>Seater </th>
-											<th>Staying From </th>
-											<th>Feedback Date </th>
-											<th>Action</th>
-										</tr>
-									</tfoot>
-									<tbody>
+    <div class="panel-heading">All Feedback Details</div>
+    <div class="panel-body">
+        <table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Sno.</th>
+                    <th>Student Name</th>
+                    <th>Reg No</th>
+                    <th>Room No</th>
+                    <th>Feedback Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $query = "SELECT * FROM feedback";
+                $result = $mysqli->query($query);
+                $cnt = 1;
+                while ($row = $result->fetch_assoc()) {
+                    ?>
+                    <tr>
+                        <td><?php echo $cnt; ?></td>
+                        <td><?php echo $row['StudentName']; ?></td>
+                        <td><?php echo $row['RegNo']; ?></td>
+                        <td><?php echo $row['roomNo']; ?></td>
+                        <td><?php echo $row['FeedbackMessage']; ?></td>
+                        <td><a href="feedback-details.php?id=<?php echo $row['id']; ?>">View Details</a></td>
+                    </tr>
+                    <?php
+                    $cnt++;
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 <?php	
 $aid=$_SESSION['id'];
-$ret="select * from registration
-JOIN userregistration on userregistration.email=registration.emailid
-join feedback on userregistration.id=feedback.userId";
+$ret="SELECT r.regno, CONCAT(ur.firstName, ' ', ur.middleName, ' ', ur.lastName) AS studentName, r.roomno, r.seater, r.stayfrom, f.postinDate
+FROM registration r
+JOIN userregistration ur ON r.emailid = ur.email
+JOIN feedback f ON ur.id = f.userId";
+
 $stmt= $mysqli->prepare($ret) ;
 //$stmt->bind_param('i',$aid);
 $stmt->execute() ;//ok

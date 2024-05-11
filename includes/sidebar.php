@@ -4,7 +4,7 @@
 				<li class="ts-label">Main</li>
 				<?PHP if(isset($_SESSION['id']))
 				{ ?>
-					<li><a href="dashboard.php"><i class="fa fa-desktop"></i>Dashboard</a></li>
+					<!-- <li><a href="dashboard.php"><i class="fa fa-desktop"></i>Dashboard</a></li> -->
 
 <!-- <li><a href="book-hostel.php"><i class="fa fa-file-o"></i>Book Hostel</a></li> -->
 <!-- <li><a href="room-details.php"><i class="fa fa-file-o"></i>Room Details</a></li> -->

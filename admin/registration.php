@@ -206,7 +206,7 @@ while($row=$res->fetch_object())
 <label class="col-sm-2 control-label"><h4 style="color: green" align="left">Personal info </h4> </label>
 </div>
 
-<div class="form-group">
+<!-- <div class="form-group">
 <label class="col-sm-2 control-label">course </label>
 <div class="col-sm-8">
 <select name="course" id="course" class="form-control" required> 
@@ -221,7 +221,7 @@ while($row=$res->fetch_object())
 <option value="<?php echo $row->course_fn;?>"><?php echo $row->course_fn;?>&nbsp;&nbsp;(<?php echo $row->course_sn;?>)</option>
 <?php } ?>
 </select> </div>
-</div>
+</div> -->
 
 <div class="form-group">
 <label class="col-sm-2 control-label">Registration No : </label>
