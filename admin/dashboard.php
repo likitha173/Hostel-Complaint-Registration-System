@@ -14,7 +14,7 @@ check_login();
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<meta name="theme-color" content="#3e454c">
+	<meta name="theme-color" content="#325d88">
 	
 	<title>DashBoard</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -85,25 +85,6 @@ $stmt1->close();
 											<a href="manage-rooms.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-									<!-- <div class="col-md-4">
-										<div class="panel panel-default">
-											<div class="panel-body bk-info text-light">
-												<div class="stat-panel text-center">
-<?php
-$result2 ="SELECT count(*) FROM courses ";
-$stmt2 = $mysqli->prepare($result2);
-$stmt2->execute();
-$stmt2->bind_result($count2);
-$stmt2->fetch();
-$stmt2->close();
-?>												
-													<div class="stat-panel-number h1 "><?php echo $count2;?></div>
-													<div class="stat-panel-title text-uppercase">Total Courses</div>
-												</div>
-											</div>
-											<a href="manage-courses.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div> -->
 									
 								</div>
 
@@ -154,25 +135,7 @@ $stmt1->close();
 											<a href="new-complaints.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-									<div class="col-md-4">
-										<div class="panel panel-default">
-											<div class="panel-body bk-warning text-light">
-												<div class="stat-panel text-center">
-<?php
-$result2 ="select count(*) from complaints where complaintStatus='In Process'";
-$stmt2 = $mysqli->prepare($result2);
-$stmt2->execute();
-$stmt2->bind_result($count2);
-$stmt2->fetch();
-$stmt2->close();
-?>												
-													<div class="stat-panel-number h1 "><?php echo $count2;?></div>
-													<div class="stat-panel-title text-uppercase">In Process Complaints</div>
-												</div>
-											</div>
-											<a href="inprocess-complaints.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
+									
 									
 								</div>
 							</div>
@@ -204,12 +167,13 @@ $stmt1->close();
 											<a href="closed-complaints.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
+									
 									<div class="col-md-4">
-										<div class="panel panel-success">
-											<div class="panel-body bk-info text-light">
+										<div class="panel panel-default">
+											<div class="panel-body bk-warning text-light">
 												<div class="stat-panel text-center">
 <?php
-$result2 ="select count(*) from feedback";
+$result2 ="select count(*) from complaints where complaintStatus='In Process'";
 $stmt2 = $mysqli->prepare($result2);
 $stmt2->execute();
 $stmt2->bind_result($count2);
@@ -217,10 +181,10 @@ $stmt2->fetch();
 $stmt2->close();
 ?>												
 													<div class="stat-panel-number h1 "><?php echo $count2;?></div>
-													<div class="stat-panel-title text-uppercase">Total Feedbacks</div>
+													<div class="stat-panel-title text-uppercase">In Process Complaints</div>
 												</div>
 											</div>
-											<a href="feedbacks.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="inprocess-complaints.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									

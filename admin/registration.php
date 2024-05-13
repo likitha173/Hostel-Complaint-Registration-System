@@ -12,7 +12,6 @@ $feespm=$_POST['fpm'];
 $foodstatus=$_POST['foodstatus'];
 $stayfrom=$_POST['stayf'];
 $duration=$_POST['duration'];
-$course=$_POST['course'];
 $regno=$_POST['regno'];
 $fname=$_POST['fname'];
 $mname=$_POST['mname'];
@@ -69,7 +68,7 @@ echo"<script>alert('Student Succssfully register');</script>";
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<meta name="theme-color" content="#3e454c">
+	<meta name="theme-color" content="#325d88">
 	<title>Student Hostel Registration</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -206,22 +205,6 @@ while($row=$res->fetch_object())
 <label class="col-sm-2 control-label"><h4 style="color: green" align="left">Personal info </h4> </label>
 </div>
 
-<!-- <div class="form-group">
-<label class="col-sm-2 control-label">course </label>
-<div class="col-sm-8">
-<select name="course" id="course" class="form-control" required> 
-<option value="">Select Course</option>
-<?php $query ="SELECT * FROM courses";
-$stmt2 = $mysqli->prepare($query);
-$stmt2->execute();
-$res=$stmt2->get_result();
-while($row=$res->fetch_object())
-{
-?>
-<option value="<?php echo $row->course_fn;?>"><?php echo $row->course_fn;?>&nbsp;&nbsp;(<?php echo $row->course_sn;?>)</option>
-<?php } ?>
-</select> </div>
-</div> -->
 
 <div class="form-group">
 <label class="col-sm-2 control-label">Registration No : </label>

@@ -545,18 +545,19 @@ li {
   border-bottom: 1px solid #f0f0f0;
 }
 .brand {
-  background: #3e454c;
+  background: #325d88;
   position: relative;
   z-index: 3;
   position: fixed;
   width: 100%;
   top: 0;
+  height: 70px;
 }
 .brand .logo {
   box-sizing: border-box;
   padding: 20px;
   float: left;
-  display: block;
+  /* display: block; */
   width: 200px;
 }
 @media only screen and (min-width: 992px) {
@@ -565,7 +566,7 @@ li {
   }
 }
 .brand .logo img {
-  height: 20px;
+  height: 31px;
 }
 .brand .menu-btn {
   float: right;
@@ -612,7 +613,7 @@ li {
 }
 .brand .ts-profile-nav .ts-account > a {
   width: 180px;
-  background: #2c3136;
+  /* background: #aec6de; */
 }
 .brand .ts-profile-nav .ts-account .ts-avatar {
   border-radius: 50%;
@@ -640,7 +641,7 @@ li {
   background-color: #b4b4b4;
 }
 .ts-sidebar {
-  background: #2c3136;
+  /* background: #f9fcff; */
   max-height: 0;
   transition: max-height 0.3s;
   overflow: hidden;
@@ -650,13 +651,15 @@ li {
   bottom: 0;
   top: 60px;
   overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  
 }
 .ts-sidebar .hidden-side {
   display: none;
 }
 .ts-sidebar .ts-sidebar-search {
   width: 100%;
-  background: #25292a;
+  /* background: #25292a; */
   border: none;
   padding: 10px 15px;
   color: #fff;
@@ -673,7 +676,7 @@ li {
   }
 }
 .ts-sidebar-menu .ts-label {
-  color: #585c64;
+  color: #ffffff;
   font-weight: bold;
   padding: 8px 15px;
   text-transform: uppercase;
@@ -685,7 +688,7 @@ li {
   display: block;
   text-decoration: none;
   padding: 12px 15px;
-  color: #fff;
+  color: #000000;
 }
 .ts-sidebar-menu li {
   position: relative;
@@ -696,8 +699,8 @@ li {
 }
 .ts-sidebar-menu li ul {
   display: block;
-  background: rgba(255, 0, 0, 0.12);
-  background: rgba(0, 0, 0, 0.32);
+  /* background: rgba(255, 0, 0, 0.12); */
+  /* background: rgba(0, 0, 0, 0.32); */
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -707,10 +710,10 @@ li {
   max-height: 2000px;
 }
 .ts-sidebar-menu .open > a {
-  background: rgba(51, 56, 62, 0.35);
+  /* background: rgba(51, 56, 62, 0.35); */
 }
 .ts-sidebar-menu > .open > a {
-  background: #33383e;
+  /* background: #33383e; */
   border-left: 3px solid #37a6c4;
 }
 .ts-sidebar-menu .open > .more i {
