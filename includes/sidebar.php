@@ -7,6 +7,7 @@
 					
 <li><a href="register-complaint.php"><i class="fa fa-file"></i> Complaint Registration</a></li>
 <li><a href="my-complaints.php"><i class="fa fa-files-o"></i> Registered Complaints </a></li>
+<li><a href="feedback.php"><i class="fa fa-file"></i> Feedback </a></li>
 <li><a href="my-profile.php"><i class="fa fa-user"></i> My Profile </a></li>
 <li><a href="change-password.php"><i class="fa fa-files-o"></i>Change Password</a></li>
 <?php } else { ?>

@@ -208,6 +208,9 @@ a:hover {
 .text-grey {
   color: #ccc;
 }
+.text-black {
+  color: #000;
+}
 .text-dgrey {
   color: #818181;
 }
@@ -641,7 +644,7 @@ li {
   background-color: #b4b4b4;
 }
 .ts-sidebar {
-  /* background: #f9fcff; */
+  background: #f9fcff;
   max-height: 0;
   transition: max-height 0.3s;
   overflow: hidden;
@@ -710,7 +713,7 @@ li {
   max-height: 2000px;
 }
 .ts-sidebar-menu .open > a {
-  /* background: rgba(51, 56, 62, 0.35); */
+  background: rgba(51, 56, 62, 0.35);
 }
 .ts-sidebar-menu > .open > a {
   /* background: #33383e; */

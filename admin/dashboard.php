@@ -47,7 +47,7 @@ check_login();
 								<div class="row">
 									<div class="col-md-4">
 										<div class="panel panel-default">
-											<div class="panel-body bk-primary text-light">
+											<div class="panel-body text-black">
 												<div class="stat-panel text-center">
 
 <?php
@@ -63,12 +63,12 @@ $stmt->close();
 													<div class="stat-panel-title text-uppercase"> Students</div>
 												</div>
 											</div>
-											<a href="manage-students.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-students.php" class="block-anchor panel-footer bk-primary" style="color: #fff;">See All <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="panel panel-default">
-											<div class="panel-body bk-success text-light">
+											<div class="panel-body text-black">
 												<div class="stat-panel text-center">
 <?php
 $result1 ="SELECT count(*) FROM rooms ";
@@ -82,7 +82,7 @@ $stmt1->close();
 													<div class="stat-panel-title text-uppercase">Total Rooms </div>
 												</div>
 											</div>
-											<a href="manage-rooms.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-rooms.php" class="block-anchor panel-footer bk-success" style="color: #fff;">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									
@@ -97,7 +97,7 @@ $stmt1->close();
 								<div class="row">
 									<div class="col-md-4">
 										<div class="panel panel-default">
-											<div class="panel-body bk-info text-light">
+											<div class="panel-body text-black">
 												<div class="stat-panel text-center">
 
 <?php
@@ -113,12 +113,12 @@ $stmt->close();
 													<div class="stat-panel-title text-uppercase"> Registered Complaints</div>
 												</div>
 											</div>
-											<a href="all-complaints.php" class="block-anchor panel-footer">Full Detail <i class="fa fa-arrow-right"></i></a>
+											<a href="all-complaints.php" class="block-anchor panel-footer bk-info" style="color: #fff;">See All <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="panel panel-default">
-											<div class="panel-body bk-danger text-light">
+											<div class="panel-body text-black">
 												<div class="stat-panel text-center">
 <?php
 $result1 ="select count(*) from complaints where complaintStatus is null";
@@ -132,7 +132,7 @@ $stmt1->close();
 													<div class="stat-panel-title text-uppercase">New Complaints </div>
 												</div>
 											</div>
-											<a href="new-complaints.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="new-complaints.php" class="block-anchor panel-footer bk-danger" style="color: #fff;">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									
@@ -150,7 +150,7 @@ $stmt1->close();
 					
 									<div class="col-md-4">
 										<div class="panel panel-default">
-											<div class="panel-body bk-success text-light">
+											<div class="panel-body text-black">
 												<div class="stat-panel text-center">
 <?php
 $result1 ="select count(*) from complaints where complaintStatus='Closed'";
@@ -164,13 +164,13 @@ $stmt1->close();
 													<div class="stat-panel-title text-uppercase">Closed Complaints </div>
 												</div>
 											</div>
-											<a href="closed-complaints.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="closed-complaints.php" class="block-anchor panel-footer bk-warning" style="color: #fff;">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									
 									<div class="col-md-4">
 										<div class="panel panel-default">
-											<div class="panel-body bk-warning text-light">
+											<div class="panel-body text-black">
 												<div class="stat-panel text-center">
 <?php
 $result2 ="select count(*) from complaints where complaintStatus='In Process'";
@@ -184,7 +184,7 @@ $stmt2->close();
 													<div class="stat-panel-title text-uppercase">In Process Complaints</div>
 												</div>
 											</div>
-											<a href="inprocess-complaints.php" class="block-anchor panel-footer text-center">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="inprocess-complaints.php" class="block-anchor panel-footer bk-success" style="color: #fff;">See All &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									

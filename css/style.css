@@ -641,7 +641,7 @@ li {
   background-color: #b4b4b4;
 }
 .ts-sidebar {
-  /* background: #f9fcff; */
+  background: #f9fcff;
   max-height: 0;
   transition: max-height 0.3s;
   overflow: hidden;

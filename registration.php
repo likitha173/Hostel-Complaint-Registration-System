@@ -1,35 +1,43 @@
 <?php
-session_start();
-include('includes/config.php');
-if(isset($_POST['submit']))
-{
-$regno=$_POST['regno'];
-$fname=$_POST['fname'];
-$mname=$_POST['mname'];
-$lname=$_POST['lname'];
-$gender=$_POST['gender'];
-$contactno=$_POST['contact'];
-$emailid=$_POST['email'];
-$password=$_POST['password'];
-	$result ="SELECT count(*) FROM userRegistration WHERE email=? || regNo=?";
-		$stmt = $mysqli->prepare($result);
-		$stmt->bind_param('ss',$email,$regno);
-		$stmt->execute();
-$stmt->bind_result($count);
-$stmt->fetch();
-$stmt->close();
-if($count>0)
-{
-echo"<script>alert('Registration number or email id already registered.');</script>";
-}else{
 
-$query="insert into  userRegistration(regNo,firstName,middleName,lastName,gender,contactNo,email,password) values(?,?,?,?,?,?,?,?)";
-$stmt = $mysqli->prepare($query);
-$rc=$stmt->bind_param('sssssiss',$regno,$fname,$mname,$lname,$gender,$contactno,$emailid,$password);
-$stmt->execute();
-echo"<script>alert('Student Succssfully register');</script>";
+session_start();
+
+include('includes/config.php');
+
+if (isset($_POST['submit'])) {
+
+    $regno = $_POST['regno'];
+    $fname = $_POST['fname'];
+    $mname = $_POST['mname'];
+    $lname = $_POST['lname'];
+    $gender = $_POST['gender'];
+    $contactno = $_POST['contact'];
+    $emailid = $_POST['email'];
+    $password = $_POST['password'];
+    $block = $_POST['block'];
+    $room = $_POST['room'];
+
+    $result = "SELECT count(*) FROM userRegistration WHERE email=? || regNo=?";
+    $stmt = $mysqli->prepare($result);
+    $stmt->bind_param('ss', $emailid, $regno);
+    $stmt->execute();
+    $stmt->bind_result($count);
+    $stmt->fetch();
+    $stmt->close();
+
+    if ($count > 0) {
+        echo "<script>alert('Registration number or email id already registered.');</script>";
+    } else {
+        $query = "INSERT INTO userRegistration (regNo, firstName, middleName, lastName, gender, contactNo, email, password, block, roomNo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $mysqli->prepare($query);
+        $stmt->bind_param('sssssissss', $regno, $fname, $mname, $lname, $gender, $contactno, $emailid, $password, $block, $room);
+        $stmt->execute();
+        $stmt->close();
+
+        echo "<script>alert('Student Successfully registered');</script>";
+    }
 }
-}
+
 ?>
 
 <!doctype html>
